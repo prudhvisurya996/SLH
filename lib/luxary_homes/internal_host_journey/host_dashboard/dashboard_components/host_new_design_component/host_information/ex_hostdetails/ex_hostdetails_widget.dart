@@ -1,0 +1,247 @@
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+import 'ex_hostdetails_model.dart';
+export 'ex_hostdetails_model.dart';
+
+class ExHostdetailsWidget extends StatefulWidget {
+  const ExHostdetailsWidget({
+    super.key,
+    required this.userName,
+    required this.phoneNumber,
+    required this.emailAddress,
+  });
+
+  final String? userName;
+  final String? phoneNumber;
+  final String? emailAddress;
+
+  @override
+  State<ExHostdetailsWidget> createState() => _ExHostdetailsWidgetState();
+}
+
+class _ExHostdetailsWidgetState extends State<ExHostdetailsWidget> {
+  late ExHostdetailsModel _model;
+
+  @override
+  void setState(VoidCallback callback) {
+    super.setState(callback);
+    _model.onUpdate();
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => ExHostdetailsModel());
+
+    WidgetsBinding.instance.addPostFrameCallback((_) => setState(() {}));
+  }
+
+  @override
+  void dispose() {
+    _model.maybeDispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Color(0xFFEBF2F9),
+        borderRadius: BorderRadius.circular(16.0),
+      ),
+      child: Padding(
+        padding: EdgeInsets.all(16.0),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              'Host Information',
+              style: GoogleFonts.getFont(
+                'Poppins',
+                color: Color(0xFF000D3E),
+                fontWeight: FontWeight.bold,
+                fontSize: 18.0,
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(35.0, 16.0, 35.0, 0.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Color(0xFFD4DFEE),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: Padding(
+                  padding:
+                      EdgeInsetsDirectional.fromSTEB(30.0, 30.0, 30.0, 30.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(100.0),
+                          child: SvgPicture.asset(
+                            'assets/images/user-unfocus.svg',
+                            width: 50.0,
+                            height: 50.0,
+                            fit: BoxFit.contain,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding:
+                            EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
+                        child: Text(
+                          valueOrDefault<String>(
+                            widget.userName,
+                            'NA',
+                          ),
+                          style: GoogleFonts.getFont(
+                            'Poppins',
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 32.0, 0.0, 16.0),
+              child: Container(
+                width: 300.0,
+                height: 70.0,
+                decoration: BoxDecoration(
+                  color: Color(0xFFD4DFEE),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Full Name',
+                        style: GoogleFonts.getFont(
+                          'Poppins',
+                          color: Color(0xFF000D3E),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0,
+                        ),
+                      ),
+                      Text(
+                        valueOrDefault<String>(
+                          widget.userName,
+                          'NA',
+                        ),
+                        style: GoogleFonts.getFont(
+                          'Poppins',
+                          color: Color(0xFF000D3E),
+                          fontSize: 12.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+              child: Container(
+                width: 300.0,
+                height: 70.0,
+                decoration: BoxDecoration(
+                  color: Color(0xFFD4DFEE),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Mobile Number',
+                        style: GoogleFonts.getFont(
+                          'Poppins',
+                          color: Color(0xFF000D3E),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0,
+                        ),
+                      ),
+                      Text(
+                        valueOrDefault<String>(
+                          widget.phoneNumber,
+                          'NA',
+                        ),
+                        style: GoogleFonts.getFont(
+                          'Poppins',
+                          color: Color(0xFF000D3E),
+                          fontSize: 12.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 16.0),
+              child: Container(
+                width: 300.0,
+                height: 70.0,
+                decoration: BoxDecoration(
+                  color: Color(0xFFD4DFEE),
+                  borderRadius: BorderRadius.circular(12.0),
+                ),
+                child: Padding(
+                  padding: EdgeInsetsDirectional.fromSTEB(50.0, 0.0, 0.0, 0.0),
+                  child: Column(
+                    mainAxisSize: MainAxisSize.max,
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Email',
+                        style: GoogleFonts.getFont(
+                          'Poppins',
+                          color: Color(0xFF000D3E),
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14.0,
+                        ),
+                      ),
+                      Text(
+                        valueOrDefault<String>(
+                          widget.emailAddress,
+                          'NA',
+                        ),
+                        style: GoogleFonts.getFont(
+                          'Poppins',
+                          color: Color(0xFF000D3E),
+                          fontSize: 12.0,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

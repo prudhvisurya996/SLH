@@ -1,0 +1,20 @@
+<svg width="41" height="38" viewBox="0 0 41 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Airbnb / Secondary Button Copy">
+<g id="Oval 2" filter="url(#filter0_d_4138_7931)">
+<circle cx="18" cy="18" r="18" transform="matrix(-1 0 0 1 36 0)" fill="white"/>
+<circle cx="18" cy="18" r="18" transform="matrix(-1 0 0 1 36 0)" stroke="#BBD1EA"/>
+</g>
+<path id="Path 2" d="M21 12L15.0721 17.9279L21 23.3775" stroke="#5246ED" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<defs>
+<filter id="filter0_d_4138_7931" x="-4.5" y="-2.5" width="45" height="45" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="2"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_4138_7931"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_4138_7931" result="shape"/>
+</filter>
+</defs>
+</svg>
